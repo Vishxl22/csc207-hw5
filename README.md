@@ -371,4 +371,6 @@ This first survey is worth 0.5% of your final grade. Together, the two CAVE surv
 
 The first survey is due **Friday, July 10, 2026**:
 [CAVE Learn Survey 1](https://q.utoronto.ca/courses/433013/quizzes/520521)
-You will be redirected to the actual survey only if you consent to participate.
+If you consent to complete the survey, you will be able to access the actual survey at [CAVE Survey #1 Redirect](https://q.utoronto.ca/courses/433013/pages/cave-survey-number-1-redirect).
+Please ignore the mark you received for CAVE Learn Survey 1. The survey will be due at the same time as the homework (at 11:59 p.m on July 10).
+If [CAVE Survey #1 Redirect](https://q.utoronto.ca/courses/433013/pages/cave-survey-number-1-redirect) is still not available after you give consent, please try refreshing the page or reach out to us.
