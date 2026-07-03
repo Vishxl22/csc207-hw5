@@ -69,7 +69,7 @@ public class DBUserDataAccessObject implements SignupUserDataAccessInterface,
 
     @Override
     public void setCurrentUsername(String name) {
-        // this isn't implemented for the lab
+        ///Something was here, I forgot
     }
 
     @Override
