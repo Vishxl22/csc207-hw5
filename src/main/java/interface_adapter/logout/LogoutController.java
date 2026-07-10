@@ -2,7 +2,6 @@ package interface_adapter.logout;
 
 import use_case.logout.LogoutInputBoundary;
 import use_case.logout.LogoutInputData;
-import use_case.logout.LogoutInteractor;
 
 /**
  * The controller for the Logout Use Case.
@@ -20,7 +19,7 @@ public class LogoutController {
      * @param username the username of the user logging
      */
     public void execute(String username) {
-        LogoutInputData logoutInputData = new LogoutInputData(username);
+        final LogoutInputData logoutInputData = new LogoutInputData(username);
         logoutUseCaseInteractor.execute(logoutInputData);
     }
 }

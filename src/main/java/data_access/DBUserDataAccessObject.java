@@ -69,7 +69,7 @@ public class DBUserDataAccessObject implements SignupUserDataAccessInterface,
 
     @Override
     public void setCurrentUsername(String name) {
-        ///Something was here, I forgot
+        // Something was here, I forgot
     }
 
     @Override

@@ -10,6 +10,8 @@ public class LogoutInputData {
         this.username = username;
     }
 
-    public String getUsername(){return username;}
+    public String getUsername() {
+        return username;
+    }
 
 }
