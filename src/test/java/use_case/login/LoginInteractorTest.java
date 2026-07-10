@@ -10,8 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LoginInteractorTest {
 
-    // TODO: make a copy of this test method and follow the instructions in the README to test that
-    //       a successful login records the current user in the data access object.
     @Test
     void successTest() {
         LoginInputData inputData = new LoginInputData("Paul", "password");
@@ -37,6 +35,35 @@ class LoginInteractorTest {
 
         LoginInputBoundary interactor = new LoginInteractor(userRepository, successPresenter);
         interactor.execute(inputData);
+    }
+
+    @Test
+    void successUserLoggedInTest() {
+        LoginInputData inputData = new LoginInputData("Paul", "password");
+        LoginUserDataAccessInterface userRepository = new InMemoryUserDataAccessObject();
+
+        UserFactory factory = new CommonUserFactory();
+        User user = factory.create("Paul", "password");
+        userRepository.save(user);
+
+        assertNull(userRepository.getCurrentUsername());
+
+        LoginOutputBoundary successPresenter = new LoginOutputBoundary() {
+            @Override
+            public void prepareSuccessView(LoginOutputData user) {
+                assertEquals("Paul", user.getUsername());
+            }
+
+            @Override
+            public void prepareFailView(String error) {
+                fail("Use case failure is unexpected.");
+            }
+        };
+
+        LoginInputBoundary interactor = new LoginInteractor(userRepository, successPresenter);
+        interactor.execute(inputData);
+
+        assertEquals("Paul", userRepository.getCurrentUsername());
     }
 
     @Test
